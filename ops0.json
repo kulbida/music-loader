@@ -1,0 +1,34 @@
+[
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "1",
+    "song_id" : "1"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "1"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "1",
+    "payload" : [
+      {"song_id" : "1"}
+    ]
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "2",
+    "payload" : [
+      {"song_id" : "2"},
+      {"song_id" : "300"}
+    ]
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  }
+]

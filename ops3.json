@@ -1,0 +1,18 @@
+[
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "2"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "4"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "5"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "6"
+  }
+]

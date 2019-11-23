@@ -1,0 +1,17 @@
+[
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "1"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "1",
+    "payload" : [
+      {"song_id" : "1"}
+    ]
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  }
+]

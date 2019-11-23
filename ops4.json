@@ -1,0 +1,65 @@
+[
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "200",
+    "song_id" : "1"
+  },
+  {
+    "optype" : "AddSong",
+    "playlist__id" : "1",
+    "song_id" : "1"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "1"
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "1",
+    "payload" : [
+      {"song_id" : "1"}
+    ]
+  },
+  {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "2",
+    "payload" : [
+      {"song_id" : "1"}
+    ]
+  },
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "1",
+    "song_id" : "6"
+  },
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "2",
+    "song_id" : "7"
+  },
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "3",
+    "song_id" : "5"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "1",
+    "payload" : [
+      {"song_id" : "1"},
+      {"song_id" : "2"},
+      {"song_id" : "3"},
+      {"song_id" : "4"},
+      {"song_id" : "5"},
+      {"song_id" : "6"}
+    ]
+  }
+]
