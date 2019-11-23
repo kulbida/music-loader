@@ -57,14 +57,14 @@ Done installing documentation for yajl-ruby after 0 seconds
 
 ##### 3. Diff-file (or changes.json)
 
-We called our change files such as `ops0.json`, `ops1.json` and so on (We call these files **changeset files**).
+We called our change files such as `ops0.json` ... `ops4.json` and so on (We call these files **changeset files**).
 
 `cat ops0.json`
 ```
 [
   {
     "optype" : "AddSong",
-    "playlist_id" : "1",
+    "playlist__id" : "1",
     "song_id" : "1"
   },
   {
@@ -83,16 +83,42 @@ We called our change files such as `ops0.json`, `ops1.json` and so on (We call t
     ]
   },
   {
+    "optype" : "RemovePlaylist",
+    "id" : "3"
+  },
+  {
     "optype" : "AddPlaylist",
     "user_id" : "2",
     "payload" : [
-      {"song_id" : "2"},
-      {"song_id" : "300"}
+      {"song_id" : "1"}
     ]
   },
   {
-    "optype" : "RemovePlaylist",
-    "id" : "3"
+    "optype" : "AddSong",
+    "playlist_id" : "1",
+    "song_id" : "6"
+  },
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "2",
+    "song_id" : "7"
+  },
+  {
+    "optype" : "AddSong",
+    "playlist_id" : "3",
+    "song_id" : "5"
+  },
+  {
+    "optype" : "AddPlaylist",
+    "user_id" : "1",
+    "payload" : [
+      {"song_id" : "1"},
+      {"song_id" : "2"},
+      {"song_id" : "3"},
+      {"song_id" : "4"},
+      {"song_id" : "5"},
+      {"song_id" : "6"}
+    ]
   }
 ]
 ```
@@ -220,7 +246,7 @@ To run our programm, please run the following command:
 cat mixtape-data.json | ruby entrypoint.rb ops0.json 2> error.log | ruby entrypoint.rb ops1.json 2>> error.log | ruby entrypoint.rb ops2.json 2>> error.log | ruby entrypoint.rb ops3.json 2>> error.log | ruby entrypoint.rb ops4.json 2>> error.log > output.json
 ```
 
-Here we use 4 changeset files, each has 3 to 6 commands. You may add as many commands as you would like. For simplicity sake we have limited commands per file to 6 in this example.
+Here we use 4 changeset files, each has 3 to 11 commands. You may add as many commands as you would like. For simplicity sake we have limited commands per file to 6 in this example.
 
 ##### 6. Errors investigation
 
