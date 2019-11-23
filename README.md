@@ -25,7 +25,7 @@ Assuming we are building a real-word batch script that can be used in a semi-pro
 
 ### Dependencies
 
-Our program is written in **Ruby 2.x** and has only one optional dependency `yajl`. We used this library as it provides support for JSON loading via TCPSocket, URL, etc. It is optional can can be removed with a standard Ruby JSON library.
+Our program is written in **Ruby 2.x** and has only one optional dependency, `yajl`. We used this library as it provides support for JSON loading via TCPSocket, URL, etc. It is optional can be removed with a standard Ruby JSON library.
 
 ### Execution
 
@@ -191,7 +191,7 @@ cat mixtape-data.json | ruby entrypoint.rb ops0.json 2> error.log | ruby entrypo
 
 Here we use 4 changeset files, each has 3 to 6 commands. You may add as many commands as you would like. For simplicity sake we have limited commands per file to 6 in this example.
 
-##### 5. Errors investigation
+##### 6. Errors investigation
 The command above produces a file `errors.log` and populates error for each run. Here is an output:
 ```cat error.log```
 
@@ -210,7 +210,7 @@ The command above produces a file `errors.log` and populates error for each run.
 {"optype":"AddSong","errors":["Playlist not found. Operation AddSong failed."],"playlist_id":"3","song_id":"5"}
 ```
 
-##### 5. Results
+##### 7. Results
 
 As requested the results are available in the `output.json` file. It does not have extra spaces to use space efficiently, but we have provided here pretty-print version:
 
@@ -357,9 +357,10 @@ As requested the results are available in the `output.json` file. It does not ha
 ```
 **Note**: Some lines are omitted.
 
-##### 6. Testing
+##### 8. Testing
 
 What we have developed is a tiny micro framework that allows you to add more functionality. Out goal was also provide proper testing ergonomics. The code can be easily tested, since there is explicit convention in place, dependent objects can be stubbed or mocked on tests which makes testing simpler.
 
 
-##### 7. Thank you
+##### 9. Thank you
+If you have more questions, please feel free to reach out.
