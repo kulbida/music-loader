@@ -57,10 +57,11 @@ Done installing documentation for yajl-ruby after 0 seconds
 
 #### 3. Diff-file (or changes.json)
 
-We called our change files such as `ops0.json` ... `ops4.json` and so on (We call these files **changeset files**).
+We named our change files such as `ops0.json` ... `ops4.json`. We will call these files **changeset files**.
 
-`cat ops0.json`
-```
+`cat ops4.json`
+
+```json
 [
   {
     "optype" : "AddSong",
@@ -130,7 +131,9 @@ The script supports the following mutation classes:
 3. AddPlaylist
 
 If you would like to add more operations to the stack, please do the following:
+
 1. Create a new mutation operation in `operations.rb` file. For example:
+
 ```ruby
 class RemovePlaylist < BaseOperation
 
@@ -172,6 +175,7 @@ At this point the program supports 3 types of collections:
 If you would like to add more collections for the input data file, please do the following:
 
 1. Create a new mutation (serializer) class in `serializers.rb`, for example:
+
 ```ruby
 class User < BaseSerializer
 
