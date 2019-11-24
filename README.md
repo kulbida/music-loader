@@ -40,11 +40,11 @@ Our program is written in **Ruby 2.x** and has only one optional dependency, `ya
 
 ### Execution
 
-##### 1. Checking Ruby version:
+#### 1. Checking Ruby version:
 
 `ruby --version` => ruby 2.3
 
-##### 2. Installing dependencies (using rubygems:
+#### 2. Installing dependencies (using rubygems:
 
 `gem install yajl-ruby`
 ```
@@ -55,7 +55,7 @@ Done installing documentation for yajl-ruby after 0 seconds
 1 gem installed
 ```
 
-##### 3. Diff-file (or changes.json)
+#### 3. Diff-file (or changes.json)
 
 We called our change files such as `ops0.json` ... `ops4.json` and so on (We call these files **changeset files**).
 
@@ -161,7 +161,7 @@ end
 1 `run!`   - this method will be executed by the `Processor` class as an operation. Here you can define all the logic to mutate the input data or report the issue to the log file.
 2 `valid?` - this method is used for the object integrity checks to avoid missing fields and broked inter-object relations.
 
-##### 4. Supported collections:
+#### 4. Supported collections:
 
 At this point the program supports 3 types of collections:
 
@@ -234,7 +234,7 @@ As you can see both attributes, `id` and `name` are defined in the `User` class 
 collector = Collector.new(processor, [User, Song, Playlist])
 ```
 
-##### 5. Ready. Steady. Go!
+#### 5. Ready. Steady. Go!
 
 1. Close this repository
 2. Make sure you have at least **Ruby 2.3** installed.
@@ -248,7 +248,7 @@ cat mixtape-data.json | ruby entrypoint.rb ops0.json 2> error.log | ruby entrypo
 
 Here we use 4 changeset files, each has 3 to 11 commands. You may add as many commands as you would like. For simplicity sake we have limited commands per file to 6 in this example.
 
-##### 6. Errors investigation
+#### 6. Errors investigation
 
 The command above produces a file `errors.log` and populates error for each run. Here is an output:
 
@@ -269,7 +269,7 @@ The command above produces a file `errors.log` and populates error for each run.
 {"optype":"AddSong","errors":["Playlist not found. Operation AddSong failed."],"playlist_id":"3","song_id":"5"}
 ```
 
-##### 7. Results
+#### 7. Results
 
 As requested the results are available in the `output.json` file. It does not have extra spaces to use space efficiently, but we have provided here pretty-print version:
 
@@ -417,10 +417,10 @@ As requested the results are available in the `output.json` file. It does not ha
 
 **Note**: Some lines are omitted.
 
-##### 8. Testing
+#### 8. Testing
 
 What we have developed is a tiny micro framework that allows you to add more functionality. Out goal was also provide proper testing ergonomics. The code can be easily tested, since there is explicit convention in place, dependent objects can be stubbed or mocked on tests which makes testing simpler.
 
-##### 9. Thank you
+#### 9. Thank you
 
 If you have more questions, please feel free to reach out.
