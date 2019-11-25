@@ -423,7 +423,7 @@ As requested the results are available in the `output.json` file. It does not ha
 
 #### 8. Testing
 
-What we have developed is a tiny micro framework that allows you to add more functionality. Out goal was also provide proper testing ergonomics. The code can be easily tested, since there is explicit convention in place, dependent objects can be stubbed or mocked on tests which makes testing simpler.
+The proposed solution is a tiny framework which allows you to add more functionality. Out goal was also provide proper testing ergonomics. The code can be easily tested, since there is explicit convention in place, dependent objects can be stubbed or mocked which makes testing simpler. We also have used Dependency Injection pattern (among others) to minimize the code coupling.
 
 #### 9. Thank you
 
