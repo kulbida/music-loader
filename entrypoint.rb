@@ -1,6 +1,6 @@
 require "yajl"
 
-require_relative "operations"
+require_relative "reducers"
 require_relative "serializers"
 require_relative "utils"
 
