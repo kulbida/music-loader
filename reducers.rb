@@ -1,6 +1,6 @@
 require_relative "json_serializable"
 
-class BaseOperation
+class BaseReducer
 
   attr_accessor :optype, :errors
 
@@ -21,7 +21,7 @@ class BaseOperation
 
 end
 
-class AddSong < BaseOperation
+class AddSong < BaseReducer
 
   attr_accessor :playlist_id, :song_id
 
@@ -51,7 +51,7 @@ class AddSong < BaseOperation
   end
 end
 
-class AddPlaylist < BaseOperation
+class AddPlaylist < BaseReducer
 
   attr_accessor :user_id, :payload
 
@@ -93,7 +93,7 @@ class AddPlaylist < BaseOperation
   end
 end
 
-class RemovePlaylist < BaseOperation
+class RemovePlaylist < BaseReducer
 
   attr_accessor :id
 
