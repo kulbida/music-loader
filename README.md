@@ -230,7 +230,7 @@ As you can see both attributes, `id` and `name` are defined in the `User` class 
 2. Inherit the class form the `BaseSerializer`
 3. Define attributes and implement `valid?` method to make sure the change action from the changeset files (see above) validates.
 
-1 `valid?` method here is used when we add a new object to the output file. We serialization layer for data validation for now.
+`valid?` method here is used when we add a new object to the output file.
 
 4. Add the new class to facade collection in the `entrypoint.rb` file, L16
 
@@ -240,7 +240,7 @@ collector = Collector.new(processor, [User, Song, Playlist])
 
 #### 5. Ready. Steady. Go!
 
-1. Close this repository
+1. Clone this repository
 2. Make sure you have at least **Ruby 2.3** installed.
 3. Run the command:
 
