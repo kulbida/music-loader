@@ -30,7 +30,7 @@ Assuming we are building a real-word batch script that can be used in a semi-pro
 
 10. Exceptions for exceptional cases, we have designed this solution to consume bad data and void bad data propagation. However, this may not be the best idea for some specific instances in which data integrity is a significant factor.
 
-11. The proposed design can serve as a base foundation for simple ETL operations. Data validation allows you to call external services to check for e-mail validness or making database requests to get additional information. See the details below for a complete list of features.
+11. The proposed design can serve as a base foundation for a simple ETL. Data validation allows you to call external services to check for e-mail validness or making database requests to get additional information. See the details below for a complete list of features.
 
 12. Note: for simplicity's sake, we do not check for the uniqueness of the data objects when we add to the collection as well as other extra features. The proposed solution allows for developing additional functionality in a modular way using public or private API. For example, we could move some of the logic into separate methods or classes for this example, we decided to keep things simple.
 
@@ -132,10 +132,10 @@ The script supports the following mutation classes:
 
 If you would like to add more operations to the stack, please do the following:
 
-1. Create a new mutation operation in `operations.rb` file. For example:
+1. Create a new mutation operation in `reducers.rb` file. For example:
 
 ```ruby
-class RemovePlaylist < BaseOperation
+class RemovePlaylist < BaseReducer
 
   attr_accessor :id
 
@@ -158,7 +158,7 @@ class RemovePlaylist < BaseOperation
 end
 ```
 
-2. Inherit from the base class `BaseOperation`
+2. Inherit from the base class `BaseReducer`
 3. Define attributes and implement `constructor`, `run!` and `valid?` methods.
 
 1 `run!`   - this method will be executed by the `Processor` class as an operation. Here you can define all the logic to mutate the input data or report the issue to the log file.
