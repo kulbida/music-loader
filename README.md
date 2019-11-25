@@ -250,7 +250,7 @@ To run our programm, please run the following command:
 cat mixtape-data.json | ruby entrypoint.rb ops0.json 2> error.log | ruby entrypoint.rb ops1.json 2>> error.log | ruby entrypoint.rb ops2.json 2>> error.log | ruby entrypoint.rb ops3.json 2>> error.log | ruby entrypoint.rb ops4.json 2>> error.log > output.json
 ```
 
-Here we use 4 changeset files, each has 3 to 11 commands. You may add as many commands as you would like. For simplicity sake we have limited commands per file to 6 in this example.
+Here we use 4 changeset files, each has 3 to 11 commands. You may add as many commands as you would like.
 
 #### 6. Errors investigation
 
