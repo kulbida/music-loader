@@ -10,6 +10,7 @@ November 23, 2019. Seattle, USA
 ### Considerations
 
 Assuming we are building a real-word batch script that can be used in a semi-production environment, the following decisions have been made.
+
 1. Using streams instead of pure files (still, the input data file  supported as requested)
 
 2. Input data validation, the program has to gracefully process bad data in the changeset files without bad data propagation down the stream. Instructions that do not pass validation are captured in a separate `error.log` file for further investigation and a potential rerun of the batch command.
@@ -33,6 +34,8 @@ Assuming we are building a real-word batch script that can be used in a semi-pro
 11. The proposed design can serve as a base foundation for a simple ETL. Data validation allows you to call external services to check for e-mail validness or making database requests to get additional information. See the details below for a complete list of features.
 
 12. Note: for simplicity's sake, we do not check for the uniqueness of the data objects when we add to the collection as well as other extra features. The proposed solution allows for developing additional functionality in a modular way using public or private API. For example, we could move some of the logic into separate methods or classes for this example, we decided to keep things simple.
+
+13. Quite a few more considerations. One is to move to AWS serverless model and utilize AWS Lambda with queuing mechanics to distribute processing and code dicoupling. Also, this approach will help to dramatically save cost for unpredictable load. Another one is to utilize AWS Spot Block-Instances.
 
 ### Dependencies
 
