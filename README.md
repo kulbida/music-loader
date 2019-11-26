@@ -15,13 +15,13 @@ Assuming we are building a real-word batch script that can be used in a semi-pro
 
 2. Input data validation, the program has to gracefully process bad data in the changeset files without bad data propagation down the stream. Instructions that do not pass validation are captured in a separate `error.log` file for further investigation and a potential rerun of the batch command.
 
-3. Security. In our proposed solution we have used streams instead of files as you need to persist the file, make sure it is securely stored and deleted afterward. Streams are, on the other hand, can be easily consumed and produced via using secure transport, such as HTTPS, for example, or HTTP socket. Another consideration is there is a potential security vulnerability due to the nature of the `changes.json` file since it serializes the class name. For further improvements, the additional layer for changeset files validation can be implemented.
+3. Security. In our proposed solution we have used streams instead of files as you need to persist the file, make sure it is securely stored and deleted afterward. Streams are, on the other hand, can be easily consumed and produced via using secure transport, such as HTTPS, for example, or TCPSocket. Another consideration is there is a potential security vulnerability due to the nature of the `changeset files` since the program serializes class name. For further improvements, the additional layer for changeset files validation can be implemented.
 
 4. Using streams, we can easily distribute the load across the workers that are dispersed across the wire.
 
 5. We used data serialization and de-serialization to provide data integrity checks and data validation. It slows down the performance a little bit, but since we are building real-world batch applications, data consistency is our priority over performance.
 
-6. The proposed solution should process small to medium-sized JSON files, close to 500MB per file. For larger files, our suggestion is to replace in-memory storage with NoSQL database.
+6. The proposed solution should process small to medium-sized JSON files, close to 500MB per file. For larger files, our suggestion is to replace *home baked* in-memory storage with NoSQL database. Another option is to use Elasticsearch service. It heavily depends on how the output data will be consumed.
 
 7. The design of the application allows to chain commands and apply various command (changes.json) files by using UNIX STDIN and STDOUT interfaces
 
